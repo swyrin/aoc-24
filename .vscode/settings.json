@@ -1,0 +1,7 @@
+{
+    // disable pylance's type checking and only use its language server
+    "python.analysis.typeCheckingMode": "off",
+    "python.languageServer": "Pylance",
+    // disable basedpyright's language server and only use its type checking
+    "basedpyright.disableLanguageServices": true
+}

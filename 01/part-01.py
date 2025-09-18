@@ -5,7 +5,8 @@ cwd = pathlib.Path()
 file = cwd.cwd() / "01" / "input.txt"
 
 with open(file, encoding="utf-8") as f:
-    L_heap, R_heap = [], []
+    L_heap: list[int] = []
+    R_heap: list[int] = []
 
     while line := f.readline():
         A, B = map(int, line.split())

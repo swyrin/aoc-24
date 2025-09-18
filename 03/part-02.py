@@ -8,9 +8,9 @@ file = cwd.cwd() / "03" / "input.txt"
 
 with open(file, encoding="utf-8") as f:
     text = f.read()
-    matches = re.findall(pattern, text)
+    matches: list[tuple[str, str, str, str]] = re.findall(pattern, text)
 
-    if matches is None:
+    if len(matches) == 0:
         print("We are cooked")
 
     total = 0
