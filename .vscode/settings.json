@@ -3,5 +3,11 @@
     "python.analysis.typeCheckingMode": "off",
     "python.languageServer": "Pylance",
     // disable basedpyright's language server and only use its type checking
-    "basedpyright.disableLanguageServices": true
+    "basedpyright.disableLanguageServices": true,
+    // AoC title configuration.
+    "workbench.editor.customLabels.patterns": {
+        "**/input.txt": "Day ${dirname} - Input",
+        "**/part-01.py": "Day ${dirname} - Part 1",
+        "**/part-02.py": "Day ${dirname} - Part 2",
+    },
 }
