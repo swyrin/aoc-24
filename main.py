@@ -18,12 +18,12 @@ with open(file=input_file, encoding="utf-8") as f:
     ...
 """
 
+input_file = dest / "input.txt"
+part_1_file = dest / "part-01.py"
+part_2_file = dest / "part-02.py"
+
 
 def main():
-    input_file = dest / "input.txt"
-    part_1_file = dest / "part-01.py"
-    part_2_file = dest / "part-02.py"
-
     dest.mkdir()
     input_file.touch()
 
@@ -35,5 +35,8 @@ if __name__ == "__main__":
     try:
         main()
         print(f"Day {day} submission created!")
-    except:
-        print("We are cooked")
+    except FileExistsError:
+        print("Part 1:")
+        exec(open(part_1_file).read())
+        print("Part 2:")
+        exec(open(part_2_file).read())
