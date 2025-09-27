@@ -6,5 +6,7 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "basedpyright>=1.31.4",
+    "numpy>=2.3.3",
     "ruff>=0.13.0",
+    "sympy>=1.14.0",
 ]
